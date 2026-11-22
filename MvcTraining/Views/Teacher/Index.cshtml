@@ -104,27 +104,4 @@
     <script src="~/js/teachers/teacher-form.js"></script>
     <script src="~/js/teachers/delete.js"></script>
 }
-@* @section Scripts{
-    <script>
-        $(document).ready(function(){
-            $.ajax({
-                url:'/Teacher/GetTeachers',
-                type:'GET',
-                success:function(teachers){
-                    let rows='';
-                    $.each(teachers,function(index,teacher){
-                            rows += 
-                            '<tr><td>' + teacher.id + 
-                            '</td><td>' + teacher.firstName + 
-                            '</td><td>' + teacher.lastName + '</td></tr>';
-                            });
-                    $('#teachersTable').html(rows);
-                },
-                error: function () {
-                    alert('خطا در دریافت اطلاعات معلمان');
-                }
-            });
-    });
-</script>
-} *@
 <!-- #endregion -->
