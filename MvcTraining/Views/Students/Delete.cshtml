@@ -1,0 +1,21 @@
+﻿@model MvcTraining.Models.Student
+
+<h2>حذف دانش‌آموز</h2>
+
+<p>
+    آیا از حذف این دانش‌آموز مطمئن هستید؟
+</p>
+
+<p>
+    @Model.FirstName @Model.LastName
+</p>
+
+<form asp-action="Delete"
+      asp-route-id="@Model.Id"
+      method="post">
+
+    <button type="submit">بله، حذف کن</button>
+
+    <a asp-action="Index">انصراف</a>
+
+</form>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MvcTraining.Models.Student>
+@{
+    ViewData["Title"] = "Student Page";
+}
+
+<h2>لیست دانش‌آموزان</h2>
+
+<a asp-controller="Students"
+   asp-action="Create">
+    افزودن دانش‌آموز
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+            <th>کد ملی</th>
+            <th>سن</th>
+            <th>عملیات</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.NationalCode</td>
+                <td>@student.Age</td>
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-id="@student.Id">
+                        ویرایش
+                    </a>
+
+                    |
+
+                    <a asp-action="Delete"
+                       asp-route-id="@student.Id">
+                        حذف
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

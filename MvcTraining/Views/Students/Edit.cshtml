@@ -1,0 +1,31 @@
+﻿@model MvcTraining.Models.Student
+
+<h2>ویرایش دانش‌آموز</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+    </div>
+
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+    </div>
+
+    <div>
+        <label asp-for="NationalCode"></label>
+        <input asp-for="NationalCode" />
+    </div>
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" />
+    </div>
+
+    <button type="submit">ذخیره تغییرات</button>
+
+</form>
